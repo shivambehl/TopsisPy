@@ -14,7 +14,7 @@ setup(
     license='MIT',
     description='This is a Python Package implementing Topsis used for multi-criteria decision analysis method',
     long_description=readme(),
-    long_description_type='text/markdown',
+    long_description_content_type='text/markdown',
     author='Shivam Behl',
     author_email='shivambehl123@gmail.com',
     url='https://github.com/shivambehl/TopsisPy',
