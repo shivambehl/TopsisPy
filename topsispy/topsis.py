@@ -1,4 +1,7 @@
+import os
+import sys
 import numpy as np
+import pandas as pd
 
 
 def floater(a):  # .astype() can be used but is not reliable
@@ -75,3 +78,33 @@ def topsis(a, w, sign):
     score = performance_score(distance_best, distance_worst, n, m)
     return (np.argmax(score), score)
     # returns a tupple with index of best data point as first element and score array(numpy) as the other
+
+
+def cli_output():
+    if len(sys.argv) != 4:
+        print('Wrong Number of args')
+        print('Input should be like - \n '
+              'python [package name] [path of csv as string] [list of weights as string] [list of sign as string]')
+    else:
+        file_path = sys.argv[1]
+        try:
+            if os.path.exists(file_path):
+                print('Path exist')
+        except OSError as err:
+            print(err.reason)
+            exit(1)
+
+        df = pd.read_csv(file_path)
+        a = df.values
+        arg2 = sys.argv[2]
+        arg3 = sys.argv[3]
+        w = arg2.strip('][').split(', ')
+        w = list(map(int, w))
+        s = arg3.strip('][').split(', ')
+        s = list(map(int, s))
+        res = topsis(a, w, s)
+        print(res)
+
+
+if __name__ == '__main__':
+    cli_output()
