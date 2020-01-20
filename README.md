@@ -10,7 +10,7 @@ TopsisPy intends to make the process of TOPSIS simple in python. Key features of
   - Numpy based
   - Ideal for Students
 
-And offcourse, PyTopsis code is Open Source.
+And off course, PyTopsis code is Open Source.
 
 ### How to use?
 Install the Package using the command - 
