@@ -66,10 +66,10 @@ def performance_score(distance_best, distance_worst, n, m):
 
 def topsis(a, w, sign):
     a = floater(a)
-    print(a)
+    # print(a)
     n = len(a)
-    print(n)
-    print(len(a[0]))
+    # print(n)
+    # print(len(a[0]))
     m = len(a[0])
     # print('n:', n, '\nm:', m)
     r = np.empty((n, m), np.float64)
