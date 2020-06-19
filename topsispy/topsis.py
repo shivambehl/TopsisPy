@@ -66,7 +66,10 @@ def performance_score(distance_best, distance_worst, n, m):
 
 def topsis(a, w, sign):
     a = floater(a)
+    print(a)
     n = len(a)
+    print(n)
+    print(len(a[0]))
     m = len(a[0])
     # print('n:', n, '\nm:', m)
     r = np.empty((n, m), np.float64)
@@ -94,12 +97,12 @@ def cli_output():
             print(err.reason)
             exit(1)
 
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path, header=None)
         a = df.values
         arg2 = sys.argv[2]
         arg3 = sys.argv[3]
         w = arg2.strip('][').split(', ')
-        w = list(map(int, w))
+        w = list(map(float, w))
         s = arg3.strip('][').split(', ')
         s = list(map(int, s))
         res = topsis(a, w, s)
