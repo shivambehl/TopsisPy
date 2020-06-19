@@ -10,9 +10,9 @@ def readme():
 setup(
     name='topsispy',
     packages=['topsispy'],
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
-    description='This is a Python Package implementing Topsis used for multi-criteria decision analysis method',
+    description='This is a Python Package implementing TOPSIS used for multi-criteria decision analysis method',
     long_description=readme(),
     long_description_content_type='text/markdown',
     author='Shivam Behl',
@@ -21,6 +21,7 @@ setup(
     keywords=['topsis', 'mcda', 'UCS633', 'TIET'],
     install_requires=[
         'numpy',
+        'pandas',
     ],
     include_package_data=True,
     classifiers=[
