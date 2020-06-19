@@ -37,7 +37,7 @@ And using this Package in python as -
  ```s
 $ python [package name] [path of csv as string] [list of weights as string] [list of sign as string]
 ```
-Here, as string means using " "
+*Here, as string means using " "*
 
 
 This will return a tuple with
