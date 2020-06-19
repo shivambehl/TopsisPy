@@ -17,7 +17,7 @@ Install the Package using the command -
 ```s
 $ pip install topsispy
 ```
-And using the in python as - 
+And using this Package in python as - 
 ```s
 >>> import topsispy as tp
 >>> a =[
@@ -31,6 +31,15 @@ And using the in python as -
 >>> sign = [-1, 1, 1, 1]
 >>> tp.topsis(a, w, sign)
 ```
+
+#### Or
+ You may use the Package via commandline as -
+ ```s
+$ python [package name] [path of csv as string] [list of weights as string] [list of sign as string]
+```
+Here, as string means using " "
+
+
 This will return a tuple with
 1. the index of winning data point
 2. array containing scores of all data points
